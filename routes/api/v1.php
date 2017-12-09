@@ -5,7 +5,7 @@ Route::post('/login', [
     'as'   => 'api.v1.login',
 ]);
 
-Route::group(['middleware' => ['jwt.auth']], function () {
+//Route::group(['middleware' => ['jwt.auth']], function () {
 
     Route::post('/logout', [
         'uses' => 'AuthenticationController@logout',
@@ -19,5 +19,7 @@ Route::group(['middleware' => ['jwt.auth']], function () {
 
     Route::resource('/users', 'UsersController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 
-});
+    Route::resource('/locations', 'LocationsController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+
+//});
 
