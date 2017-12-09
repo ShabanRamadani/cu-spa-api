@@ -169,6 +169,7 @@ return [
         Laravel\Tinker\TinkerServiceProvider::class,
         EllipseSynergie\ApiResponse\Laravel\ResponseServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
+        BenConstable\Localize\LocalizeServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -231,7 +232,7 @@ return [
 
         'JWTAuth'    => Tymon\JWTAuth\Facades\JWTAuth::class,
         'JWTFactory' => Tymon\JWTAuth\Facades\JWTFactory::class,
-
+        'Localizer'  => BenConstable\Localize\DeterminerFacade::class,
 
     ],
 

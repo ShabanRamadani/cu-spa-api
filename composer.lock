@@ -4,8 +4,64 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4db649d3c9b198637ee31b977b5563ba",
+    "content-hash": "c74fb012e6585ab106b2a2cff6c43090",
     "packages": [
+        {
+            "name": "benconstable/laravel-localize-middleware",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/BenConstable/laravel-localize-middleware.git",
+                "reference": "7e156bb1140100c4d27a3c1ea0e6e29ea526fea5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/BenConstable/laravel-localize-middleware/zipball/7e156bb1140100c4d27a3c1ea0e6e29ea526fea5",
+                "reference": "7e156bb1140100c4d27a3c1ea0e6e29ea526fea5",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "~5.1",
+                "php": ">=5.5.9"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~4.8",
+                "squizlabs/php_codesniffer": "~2.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BenConstable\\Localize\\": "src/Localize"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ben Constable",
+                    "email": "ben@benconstable.co.uk",
+                    "homepage": "https://benconstable.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Configurable localization middleware for your Laravel >=5.1 application",
+            "homepage": "https://github.com/BenConstable/laravel-localize-middleware",
+            "keywords": [
+                "laravel",
+                "localise",
+                "localize",
+                "middleware"
+            ],
+            "time": "2017-06-04T17:27:46+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",

@@ -2,6 +2,7 @@
 
 namespace Spa\Http;
 
+use BenConstable\Localize\Http\Middleware\Localize;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
 use Illuminate\Auth\Middleware\Authorize;
@@ -32,6 +33,7 @@ class Kernel extends HttpKernel
         ValidatePostSize::class,
         Middleware\TrimStrings::class,
         ConvertEmptyStringsToNull::class,
+        Localize::class,
     ];
 
     /**
