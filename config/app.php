@@ -167,6 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
+        EllipseSynergie\ApiResponse\Laravel\ResponseServiceProvider::class,
 
         /*
          * Application Service Providers...
