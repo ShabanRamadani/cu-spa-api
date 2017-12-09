@@ -6,7 +6,6 @@ use Illuminate\Support\ServiceProvider;
 use Spa\Listeners\Jwt\TokenAbsent;
 use Spa\Listeners\Jwt\TokenExpired;
 use Spa\Listeners\Jwt\TokenInvalid;
-use Spa\Listeners\Jwt\UserNotFound;
 
 class AppServiceProvider extends ServiceProvider
 {
