@@ -16,6 +16,7 @@ use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
 use Spa\Http\Middleware\RedirectIfAuthenticated;
 use Spa\Http\Middleware\VerifyCsrfToken;
+use Tymon\JWTAuth\Middleware\GetUserFromToken;
 
 class Kernel extends HttpKernel
 {
@@ -70,6 +71,7 @@ class Kernel extends HttpKernel
     protected $routeMiddleware = [
         'auth'       => Authenticate::class,
         'auth.basic' => AuthenticateWithBasicAuth::class,
+        'jwt.auth'   => GetUserFromToken::class,
         'bindings'   => SubstituteBindings::class,
         'can'        => Authorize::class,
         'guest'      => RedirectIfAuthenticated::class,
