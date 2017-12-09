@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Routing\Controller as BaseController;
+use Spa\Transformers\Serializer;
 
 class ApiController extends BaseController
 {
@@ -20,5 +21,6 @@ class ApiController extends BaseController
     public function __construct(Response $response)
     {
         $this->response = $response;
+        $this->response->getManager()->setSerializer(new Serializer);
     }
 }
