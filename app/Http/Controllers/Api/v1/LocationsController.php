@@ -85,7 +85,13 @@ class LocationsController extends ApiController
      */
     public function destroy(LocationDeleteRequest $request, $location)
     {
+        /** @var Location $location */
         $location = Location::query()->findOrFail($location);
+
+        if ($location->events()->count() > 0) {
+            return $this->response->errorWrongArgs(trans('exceptions.cant_delete_location_with_events'));
+        }
+
         $location->delete();
 
         return response()->json([], 204);

@@ -21,5 +21,7 @@ Route::post('/login', [
 
     Route::resource('/locations', 'LocationsController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
 
+    Route::resource('/events', 'EventsController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
+
 //});
 

@@ -17,4 +17,9 @@ class Location extends BaseModel
         'longitude',
     ];
 
+    public function events()
+    {
+        return $this->hasMany(Event::class);
+    }
+
 }

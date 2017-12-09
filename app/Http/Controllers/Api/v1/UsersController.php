@@ -86,7 +86,12 @@ class UsersController extends ApiController
      */
     public function destroy(UserDeleteRequest $request, $user)
     {
+        /** @var User $user */
         $user = User::query()->findOrFail($user);
+        if ($user->events()->count() > 0) {
+            return $this->response->errorWrongArgs(trans('exceptions.cant_delete_user_with_events'));
+        }
+
         $user->delete();
 
         return response()->json([], 204);
