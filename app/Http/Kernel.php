@@ -2,6 +2,7 @@
 
 namespace Spa\Http;
 
+use Barryvdh\Cors\HandleCors;
 use BenConstable\Localize\Http\Middleware\Localize;
 use Illuminate\Auth\Middleware\Authenticate;
 use Illuminate\Auth\Middleware\AuthenticateWithBasicAuth;
@@ -33,6 +34,7 @@ class Kernel extends HttpKernel
         ValidatePostSize::class,
         Middleware\TrimStrings::class,
         ConvertEmptyStringsToNull::class,
+        HandleCors::class,
         Localize::class,
     ];
 

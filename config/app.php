@@ -170,6 +170,7 @@ return [
         EllipseSynergie\ApiResponse\Laravel\ResponseServiceProvider::class,
         Tymon\JWTAuth\Providers\JWTAuthServiceProvider::class,
         BenConstable\Localize\LocalizeServiceProvider::class,
+        Barryvdh\Cors\ServiceProvider::class,
 
         /*
          * Application Service Providers...
