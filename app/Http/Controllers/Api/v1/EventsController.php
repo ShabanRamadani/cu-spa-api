@@ -77,6 +77,7 @@ class EventsController extends ApiController
 
             return $this->response->withItem($event, $this->transformer);
         } catch (\Exception $exception) {
+            DB::rollback();
             return $this->response->errorInternalError($exception->getMessage());
         }
     }
@@ -89,7 +90,6 @@ class EventsController extends ApiController
      */
     public function update(EventUpdateRequest $request, $event)
     {
-
         DB::beginTransaction();
         try {
             $event = Event::query()->findOrFail($event);
