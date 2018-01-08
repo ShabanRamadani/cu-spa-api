@@ -7,8 +7,12 @@ use Spa\Models\User;
 class UserTransformer extends BaseTransformer
 {
     protected $availableIncludes = [
-
+        'events'
     ];
+
+    public function includeEvents (User $user) {
+        return $this->collection($user->events, new EventTransformer, 'events');
+    }
 
     public function transform(User $user)
     {
