@@ -9,6 +9,6 @@ class TokenAbsent extends TokenBase
      */
     public function handle()
     {
-        return $this->response->errorUnauthorized('Token is absent.');
+        return $this->response->errorUnauthorized(trans('exceptions.token_absent'));
     }
 }
